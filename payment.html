@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frosted Bites | Secure Payment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="payment">
+  <div class="ambient ambient-1"></div>
+  <div class="ambient ambient-2"></div>
+  <main class="payment-shell reveal hero-entry">
+    <section class="glass-panel payment-panel">
+      <div class="section-head compact">
+        <span class="eyebrow">Secure Gateway</span>
+        <h1>Frosted Pay</h1>
+      </div>
+      <div class="gateway-chip"><span>Protected payment tunnel</span><strong>256-bit encrypted session</strong></div>
+      <form class="payment-form" data-payment-form>
+        <label>Cardholder Name<input type="text" name="name" placeholder="Name on card" required></label>
+        <label>Card Number<input type="text" name="card" placeholder="1234 5678 9012 3456" maxlength="19" required></label>
+        <div class="payment-row">
+          <label>Expiry<input type="text" name="expiry" placeholder="MM/YY" maxlength="5" required></label>
+          <label>CVV<input type="password" name="cvv" placeholder="123" maxlength="3" required></label>
+        </div>
+        <label>Billing Address<textarea name="address" rows="3" placeholder="Street, city, landmark" required></textarea></label>
+        <button class="neo-btn" type="submit">Pay Now</button>
+      </form>
+      <p class="form-note" data-payment-message>Review the cart summary on the right and complete your payment securely.</p>
+    </section>
+    <aside class="glass-panel payment-summary" data-payment-summary></aside>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
